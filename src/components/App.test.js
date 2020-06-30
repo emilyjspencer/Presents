@@ -21,6 +21,10 @@ describe('App', () => {
         expect(wrapper.state().presents).toEqual([]);
     });
 
+    it('adds a new present to the presents array', () => {
+        wrapper.instance().addPresent('Barbie')
+        expect(wrapper.state().presents).toEqual(['Barbie']);
+    });
    
 
     

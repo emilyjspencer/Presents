@@ -9,6 +9,10 @@ class App extends Component {
        this.state = { presents: [] }
     };
 
+    addPresent(present) {
+        this.state.presents.push(present)
+    };
+
 
     render() {
       return(
