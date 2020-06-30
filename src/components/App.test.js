@@ -8,8 +8,13 @@ describe('App', () => {
 
     beforeEach(() => wrapper = shallow(<App />));
 
+    it('renders correctly', () => {
+        expect(wrapper).toMatchSnapshot();
+    })
 
     it('renders a <div />', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
+
+    
 });
