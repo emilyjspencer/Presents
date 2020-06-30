@@ -20,18 +20,24 @@ describe('App', () => {
     it('the state has an empty array of presents', () => {
         expect(wrapper.state().presents).toEqual([]);
     });
+});
 
-    it('adds a new present to the presents array in the component state when the add present button is clicked', () => {
+    describe('when the add-present button is clicked', () => {
+        let wrapper;
+
+        beforeEach(() => wrapper = shallow(<App />));
+
+      it('adds a new present to the presents array in the component state when the add present button is clicked', () => {
         wrapper.find('.add-present').simulate('click');
         expect(wrapper.state().presents).toEqual([{ id: 1 }]);
-    });
+      });
 
-    it('adds a new present to the rendered list upon button click', () => {
+      it('adds a new present to the rendered list upon button click', () => {
         wrapper.find('.add-present').simulate('click');
-
-        expect(wrapper.find('.list').children().length).toEqual(1);
-    });
+        wrapper.find('.add-present').simulate('click');
+        expect(wrapper.find('.list').children().length).toEqual(2);
+      });
+  });
    
 
     
-});
