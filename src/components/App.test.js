@@ -17,6 +17,10 @@ describe('App', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
 
+    it('the state has an empty array of presents', () => {
+        expect(wrapper.state().presents).toEqual([]);
+    });
+
    
 
     
