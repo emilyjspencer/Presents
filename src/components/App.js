@@ -24,7 +24,19 @@ class App extends Component {
     render() {
       return(
         <div>
-          <h2>Presents</h2>
+          <h2 align="center">Presents</h2>
+          <div className="list">
+              {
+                  this.state.presents.map(present => {
+                      return (
+                          <div>
+                              console.log('Hi')
+                          </div>
+                          
+                      )
+                  })
+              }
+          </div>
           <Button onClick={this.addPresent} className="add-present">Add Present</Button>
         </div>
       )
