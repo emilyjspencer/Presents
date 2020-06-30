@@ -25,15 +25,16 @@ describe('App', () => {
     describe('when the add-present button is clicked', () => {
         let wrapper;
 
-        beforeEach(() => wrapper = shallow(<App />));
+        beforeEach(() => (wrapper) = shallow(<App />))
+        beforeEach(() => {
+            wrapper.find('.add-present').simulate('click')
+        });
 
       it('adds a new present to the presents array in the component state when the add present button is clicked', () => {
-        wrapper.find('.add-present').simulate('click');
         expect(wrapper.state().presents).toEqual([{ id: 1 }]);
       });
 
       it('adds a new present to the rendered list upon button click', () => {
-        wrapper.find('.add-present').simulate('click');
         wrapper.find('.add-present').simulate('click');
         expect(wrapper.find('.list').children().length).toEqual(2);
       });
