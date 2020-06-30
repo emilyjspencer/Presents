@@ -13,4 +13,8 @@ describe('Present', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
 
+    it('initializes a person and present in the component state', () => {
+        expect(wrapper.state()).toEqual({ person: '', present: '' });
+    });
+
 });
