@@ -30,7 +30,9 @@ describe('App', () => {
             wrapper.find('.add-present').simulate('click')
         });
 
-      it('adds a new present to the presents array in the component state when the add present button is clicked', () => {
+        
+
+      it('adds a new present to the presents array in the component state', () => {
         expect(wrapper.state().presents).toEqual([{ id: 1 }]);
       });
 
