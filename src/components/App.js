@@ -22,12 +22,9 @@ class App extends Component {
     };
 
 
-    removePresent = () => {
+    removePresent = (id) => {
         const { presents } = this.state;
-        const ids = this.state.presents.map(present => present.id );
-
-        const max_id  = ids.length > 0 ? Math.max(...ids) : 0;
-        presents.pop({ id: max_id })
+        const ids = this.state.presents.filter(present => present.id !== id);
 
         this.setState({ presents });
     }
