@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import Present from './Present';
 
 
 class App extends Component {
@@ -29,15 +30,14 @@ class App extends Component {
               {
                   this.state.presents.map(present => {
                       return (
-                          <div>
-                              console.log('Hi')
-                          </div>
+                          <Present key={present.id} />
                           
                       )
                   })
               }
           </div>
           <Button onClick={this.addPresent} className="add-present">Add Present</Button>
+       
         </div>
       )
     }

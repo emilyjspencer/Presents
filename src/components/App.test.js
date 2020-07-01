@@ -40,6 +40,10 @@ describe('App', () => {
         wrapper.find('.add-present').simulate('click');
         expect(wrapper.find('.list').children().length).toEqual(2);
       });
+
+      it('creates a Gift component', () => {
+          expect(wrapper.find('Present').exists()).toBe(true);
+      });
   });
    
 
