@@ -5,9 +5,13 @@ import Present from './Present';
 
 describe('Present', () => {
 
+    const mockRemove = jest.fn();
+    const id = 1;
+    const props = { present: { id }, removePresent: mockRemove };
+
     let wrapper;
 
-    beforeEach(() => wrapper = shallow(<Present />));
+    beforeEach(() => wrapper = shallow(<Present {...props} />));
 
     it('renders correctly', () => {
         expect(wrapper).toMatchSnapshot();
@@ -25,10 +29,6 @@ describe('Present', () => {
 
     describe('when entering a persons name', () => {
 
-      let wrapper;
-
-      beforeEach(() => wrapper = shallow(<Present />));
-
       beforeEach(() => {
         wrapper.find('.name').simulate('change', { target: { value: 'Laura' }});
       });
@@ -39,9 +39,6 @@ describe('Present', () => {
     });
 
     describe('when entering a present', () => {
-        let wrapper;
-
-        beforeEach(() => wrapper = shallow(<Present />));
 
         beforeEach(() => {
              wrapper.find('.present').simulate('change', { target: { value: 'Barbie' }});
@@ -49,6 +46,17 @@ describe('Present', () => {
 
         it('updates the present in the component state', () => {
             expect(wrapper.state().present).toEqual('Barbie');
+        });
+    });
+
+    describe('clicking the remove gift button', () => {
+
+        beforeEach(() => {
+            wrapper.find('.remove-button').simulate('click');
+        });
+
+        it('the removePresent callback is invoked upon button click', () => {
+          expect(mockRemove).toHaveBeenCalledWith(id)
         });
     });
 

@@ -23,6 +23,11 @@ class Present extends Component {
                    <FormControl onChange={event => this.setState({ present: event.target.value })} className="present" />
                </FormGroup>
            </Form>
+           <Button 
+             className="remove-button"
+             onClick={() => this.props.removePresent(this.props.present.id)}
+             >Remove Present
+             </Button>
 
          </div>
         )

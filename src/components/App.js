@@ -23,8 +23,8 @@ class App extends Component {
 
 
     removePresent = (id) => {
-        const { presents } = this.state;
-        const ids = this.state.presents.filter(present => present.id !== id);
+       
+        const presents = this.state.presents.filter(present => present.id !== id);
 
         this.setState({ presents });
     }
@@ -37,14 +37,18 @@ class App extends Component {
               {
                   this.state.presents.map(present => {
                       return (
-                          <Present key={present.id} />
+                          <Present 
+                            key={present.id}
+                            present={present}
+                            removePresent={this.removePresent}
+                           />
                           
                       )
                   })
               }
           </div>
           <Button onClick={this.addPresent} className="add-present">Add Present</Button>
-       
+          
         </div>
       )
     }
