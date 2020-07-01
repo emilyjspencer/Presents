@@ -21,20 +21,35 @@ describe('Present', () => {
         expect(wrapper.state()).toEqual({ person: '', present: '' });
     });
 
-});
 
-describe('when entering a persons name', () => {
 
-    let wrapper;
+    describe('when entering a persons name', () => {
 
-    beforeEach(() => wrapper = shallow(<Present />));
+      let wrapper;
 
-    beforeEach(() => {
+      beforeEach(() => wrapper = shallow(<Present />));
+
+      beforeEach(() => {
         wrapper.find('.name').simulate('change', { target: { value: 'Laura' }});
-    });
+      });
     
-    it('updates the person in the component state', () => {
-      expect(wrapper.state().person).toEqual('Laura');
+      it('updates the person in the component state', () => {
+        expect(wrapper.state().person).toEqual('Laura');
+      });
+    });
+
+    describe('when entering a present', () => {
+        let wrapper;
+
+        beforeEach(() => wrapper = shallow(<Present />));
+
+        beforeEach(() => {
+             wrapper.find('.present').simulate('change', { target: { value: 'Barbie' }});
+        });
+
+        it('updates the present in the component state', () => {
+            expect(wrapper.state().present).toEqual('Barbie');
+        });
     });
 
 });

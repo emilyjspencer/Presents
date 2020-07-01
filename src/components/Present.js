@@ -17,6 +17,7 @@ class Present extends Component {
                <FormGroup>
                    <ControlLabel>Name</ControlLabel>
                    <FormControl onChange={event => this.setState({ person: event.target.value })} className="name" />
+                   <FormControl onChange={event => this.setState({ present: event.target.value })} className="present" />
                </FormGroup>
            </Form>
          </div>
