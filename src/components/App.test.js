@@ -44,6 +44,22 @@ describe('App', () => {
       it('creates a Gift component', () => {
           expect(wrapper.find('Present').exists()).toBe(true);
       });
+
+      describe('removing the present that was added', () => {
+
+        let wrapper;
+
+        beforeEach(() => wrapper = shallow(<App />));
+
+        beforeEach(() => {
+            wrapper.instance().removePresent(1);
+        });
+
+        it('removes the present from the component state', () => {
+          expect(wrapper.state().presents).toEqual([]);
+        });
+      });
+      
   });
    
 
