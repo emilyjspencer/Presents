@@ -1,4 +1,27 @@
 .add-present {
-    text-align: center;
-    
+    text-align: center;   
 }
+
+body {
+  text-align: center;
+  padding: 50%;
+  padding-right: 24%;
+  padding-left: 24%;
+  background-color: pink;
+  font-family: Indie Flower;
+  font-weight: 200;
+};
+
+.present {
+    border: 3px solid blue;
+    border-radius: 7px;
+    margin: 20px;
+    padding: 15px;
+}
+
+Button {
+    margin: 1px;
+    background-color: ray;
+    height: 40px;
+    border: 5px solid green;
+};

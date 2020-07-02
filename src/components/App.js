@@ -33,7 +33,7 @@ class App extends Component {
     render() {
       return(
         <div>
-          <h2 align="center">Presents</h2>
+          <h2 align="center">Presents Planner</h2>
           <div className="list">
               {
                   this.state.presents.map(present => {
