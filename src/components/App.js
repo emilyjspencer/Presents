@@ -5,6 +5,8 @@ import Header from './Header';
 import { max_number } from '../helpers';
 
 
+
+
 class App extends Component {
     constructor(){
         super()
@@ -35,7 +37,7 @@ class App extends Component {
       return(
         <div>
           <Header />
-          <h2 align="center">Presents Planner</h2>
+          <br />
           <div className="list">
               {
                   this.state.presents.map(present => {
@@ -50,8 +52,10 @@ class App extends Component {
                   })
               }
           </div>
-          <Button onClick={this.addPresent} className="add-present">Add Present</Button>
-          
+          <Button 
+            onClick={this.addPresent} 
+            className="add-present"
+            >Add Present</Button>
         </div>
       )
     }
