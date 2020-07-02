@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import Present from './Present';
+import Header from './Header';
 import { max_number } from '../helpers';
 
 
@@ -33,6 +34,7 @@ class App extends Component {
     render() {
       return(
         <div>
+          <Header />
           <h2 align="center">Presents Planner</h2>
           <div className="list">
               {

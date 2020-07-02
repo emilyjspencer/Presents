@@ -20,6 +20,10 @@ describe('App', () => {
     it('the state has an empty array of presents', () => {
         expect(wrapper.state().presents).toEqual([]);
     });
+
+    it('renders a Header component', () => {
+        expect(wrapper.find('Header').length).toEqual(1);
+    });
 });
 
     describe('when the add-present button is clicked', () => {
