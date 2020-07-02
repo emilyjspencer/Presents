@@ -5,8 +5,7 @@ const Header = () => {
 
     return (
         <div>
-            Present Planner
-            <img src={Image} />
+            <img id="peonies" src={Image} />
         </div>
     )
 }

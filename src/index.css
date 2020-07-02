@@ -4,16 +4,17 @@
 
 body {
   text-align: center;
-  padding: 50%;
-  padding-right: 24%;
-  padding-left: 24%;
-  background-color: pink;
+  padding: 10%;
+  padding-right: 4%;
+  padding-left: 4%;
+  background-color: rgb(238, 236, 236);
   font-family: Indie Flower;
   font-weight: 200;
+  color: rgb(77, 75, 75);
 };
 
 .present {
-    border: 3px solid blue;
+    border: 3px solid rgb(178, 178, 180);
     border-radius: 7px;
     margin: 20px;
     padding: 15px;
@@ -21,7 +22,24 @@ body {
 
 Button {
     margin: 1px;
-    background-color: ray;
+    background-color: rgb(172, 169, 169);
+    color: gray;
     height: 40px;
-    border: 5px solid green;
+    border: 5px solid rgb(161, 163, 161);
 };
+
+#peonies {
+    width: 40px;
+}
+
+.btn-primary { 
+    background-color: rgb(170, 165, 165);
+ }
+
+ .remove-button {
+     background-color: gray;
+ }
+
+
+
+
