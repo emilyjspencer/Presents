@@ -3,6 +3,8 @@
 Test-driving a React application with Enzyme and Jest.
 Presents Planner allows the user to save present ideas for their friends and family.
 
+**Presents Planner** is deployed with **Surge** at: [this link](http://pale-plastic.surge.sh/)!
+
 ### How to use:
 
 * Clone this repo:
@@ -35,4 +37,5 @@ The application will open automatically in the browser
 ![presents](presents.png)
 ![presents](add_present.png)
 
-Deployed with Surge at: pale-plastic.surge.sh
+
+### Deployed with Surge at: [this link](http://pale-plastic.surge.sh/)!
